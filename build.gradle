@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.gretty' version '3.0.5'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+
+gretty {
+    servletContainer = 'tomcat9' // Вибираємо версію Tomcat
+}
