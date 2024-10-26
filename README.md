@@ -31,7 +31,7 @@ cd Servlet-education
 .\gradlew appRun
 ```
 ### 5. Відкрийте застосунок у браузері
-   Перейдіть за адресою http://localhost:8080/hello, щоб побачити повідомлення "Hello, World!".
+   Перейдіть за адресою http://localhost:8080/Servlet-education/hello, щоб побачити повідомлення "Hello, World!".
 
 
 ### Вирішення проблем

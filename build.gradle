@@ -1,6 +1,7 @@
 plugins {
     id 'java'
-    id 'org.gretty' version '3.0.5'
+    id 'war'
+    id 'org.gretty' version "${grettyVersion}"
 }
 
 group = 'com.example'
@@ -11,14 +12,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+    compileOnly "jakarta.servlet:jakarta.servlet-api:${servletApiVersion}"
+    testImplementation "jakarta.servlet:jakarta.servlet-api:${servletApiVersion}"
 }
-
-tasks.named('test') {
-    useJUnitPlatform()
-}
-
 
 gretty {
-    servletContainer = 'tomcat9' // Вибираємо версію Tomcat
+    servletContainer = 'tomcat10'
 }
